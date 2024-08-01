@@ -8,6 +8,7 @@ const counters = document.querySelectorAll('._counter');
 const scrollTop = document.getElementById('scroll-top');
 const navMenuItems = document.querySelectorAll('._nav-menu');
 const hoverLine = document.getElementById('hover-line'); 
+const navContainer = document.querySelector('._nav-container')
 
 hamburger.addEventListener('click', () => {
     navigationBar.classList.toggle('navigation-open');
@@ -74,9 +75,11 @@ const handleScroll = () => {
     });
 
     if(scrollY > 180) {
-        scrollTop.style.opacity = '100'
+        scrollTop.style.opacity = '100';
+        navContainer.classList.add('nav-top');
     } else {
-        scrollTop.style.opacity = '0'
+        scrollTop.style.opacity = '0';
+        navContainer.classList.remove('nav-top');
     }
 };
 
