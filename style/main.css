@@ -2,6 +2,15 @@
     scroll-behavior: smooth;
 }
 
+._parallax {
+    background-image: url('/assets/header_about.jpg');
+    height: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 ._overlay.open {
     position: fixed;
     top: 0;
@@ -58,10 +67,12 @@ a._active {
     ._nav-menu {
         width: 100%;
     }
-    ._nav-menu > a._active {
+    ._nav-menu > a._active,
+    ._nav-menu > span._active {
         color: white;
     }
-    ._nav-menu > a {
+    ._nav-menu > a,
+    ._nav-menu > span {
         color: #a1a1a1;
     }
     ._sub-menu {
@@ -80,7 +91,10 @@ a._active {
         width: 100%;
     }
     ._sub-menu ._sub-menu-wrapper > a, 
-    ._sub-sub-menu li a {
+    ._sub-sub-menu li a, 
+    ._sub-menu ._sub-menu-wrapper > span, 
+    ._sub-sub-menu li span 
+    {
         padding: 20px 0;
         font-weight: 600;
         text-transform: uppercase;
@@ -91,7 +105,8 @@ a._active {
         border-bottom: 1px solid;
     }
     ._text-sub-menu,
-    ._sub-sub-menu li a {
+    ._sub-sub-menu li a,
+    ._sub-sub-menu li span {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
