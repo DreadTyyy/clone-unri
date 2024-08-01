@@ -19,6 +19,7 @@
     width: 100vw;
     background-color: black;
     opacity: 0.6;
+    z-index: 99;
 }
 
 .hamburger-line {
@@ -61,8 +62,15 @@ a._active {
 }
 
 @media (max-width: 768px) {
+    .nav-top {
+        position: fixed;
+        width: 100%;
+    }
     .navigation-open {
         left: 35% !important;
+    }
+    ._parallax {
+        background-attachment: local;
     }
     ._nav-menu {
         width: 100%;
