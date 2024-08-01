@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Web Universitas Riau</title>
+    <meta name="description" content="Deskripsi singkat mengenai website ini">
+
+    <!-- Icon website -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="./style/main.css" rel="stylesheet" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link href="./style/style.css" rel="stylesheet" />
+
+    <!-- Font Poppins & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="_poppins-regular">
+    <div class="_overlay"></div>
+    <div id="scroll-top" class="size-fit fixed bottom-5 right-5 z-[999] transition-all duration-300">
+        <a href="#top" class="text-sm size-12 bg-gray-300 rounded-full flex justify-center items-center">
+            <i class="fa-solid fa-chevron-right -rotate-90"></i>
+        </a>
+    </div>
+    <header id="top" class="md:px-12 px-8 py-6 flex items-center justify-end gap-12 w-full text-[12px] bg-black text-dark-300 md:h-[56px] h-[96px] -z-10">
+        <div class="flex flex-wrap items-center md:w-fit w-full md:gap-6 gap-2">
+            <a href="#" class="hover:text-white duration-500">Portal</a>
+            <a href="#" class="hover:text-white duration-500">Kalender Akademik</a>
+            <a href="#" class="hover:text-white duration-500">Webmail</a>
+            <a href="#" class="hover:text-white duration-500">Blog Staff</a>
+            <a href="#" class="hover:text-white duration-500">Dokumen</a>
+            <a href="#" class="hover:text-white duration-500">Perpustakaan</a>
+            <a href="#" class="hover:text-white duration-500">Prestasi</a>
+            <a href="#" class="hover:text-white duration-500">PPID</a>
+            <a href="#" class="hover:text-white duration-500">PKKMB</a>
+        </div>
+        <a href="https://unri.ac.id/en/?" class="hover:text-white duration-500">English</a>
+    </header>
+    <div class="bg-primary md:sticky z-50">
+        <nav class="md:mx-12 mx-8 md:relative static flex justify-between items-center h-20 shadow-sm">
+            <img src="assets/logo_navigasi_bar.png" alt="Logo Universitas Riau" class="md:max-h-11 max-h-6">
+            <ul id="navigation-bar" class="_poppins-medium cursor-pointer z-[99] md:p-0 md:static flex md:flex-row md:bg-transparent flex-col md:justify-end items-end md:h-full text-[13px] text-white fixed top-0 p-10 h-screen w-[65%] left-full bg-dark-900 text-left justify-center transition-all duration-300">
+                <div id="hamburger-side" class="flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+                <li class="_nav-menu px-2 group">
+                    <a href="#" class="_active md:w-fit w-full md:border-none border-b border-gray-100 py-5 block hover:text-secondary duration-500">BERANDA</a>
+                </li>
+                <li class="_nav-menu px-2 group"> 
+                    <a href="#" class="md:w-fit w-full md:border-none border-b border-gray-100 hover:text-secondary duration-500 py-5 flex justify-between">
+                        <span class="_text-sub-menu">TENTANG UNRI</span>
+                        <span data-collapse="tentang-unri" class="_button-sub-menu px-2 text-[12px] md:hidden inline-block"><i class="fa-solid fa-chevron-right"></i></span>
+                    </a>
+                    <div data-ref-collapse="tentang-unri" class="_sub-menu md:hidden block md:group-hover:flex justify-between gap-8 md:bg-primary-500 bg-dark-900 absolute left-0 md:top-20 w-full p-10 top-0">
+                        <div class="_back-side flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                        </div>
+                        <div class="_sub-menu-wrapper w-full">
+                            <a href="#" class="_poppins-semibold flex justify-between px-2 text-lg text-my-blue-600 hover:bg-gray-100 duration-300 border-gray-100">
+                                <span class="_text-sub-menu">Organisasi</span>
+                                <span 
+                                data-collapse="organisasi" class="_button-sub-sub-menu px-2 text-[12px] md:hidden inline-block"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a> 
+                            <ul data-ref-collapse="organisasi" class="_sub-sub-menu md:flex md:p-0 block md:relative flex-col mt-6 md:bg-transparent bg-dark-900 w-full absolute left-0 p-10 top-0">
+                                <div class="_back-side-sub-menu flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                </div>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Rektorat</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Senat Akademik</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Dewan Pengawas</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas & Pascasarjana</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Unit Pelaksana Teknis, Badan dan RSP</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Biro</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="_sub-menu-wrapper w-full">
+                            <a href="#" class="_poppins-semibold flex justify-between px-2 text-lg text-my-blue-600 hover:bg-gray-100 duration-300 border-gray-100">
+                                <span class="_text-sub-menu">Sekilas UNRI</span>
+                                <span 
+                                data-collapse="sekilas-unri"
+                                class="_button-sub-sub-menu px-2 text-[12px] md:hidden inline-block"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a> 
+                            <ul 
+                                data-ref-collapse="sekilas-unri"
+                                class="_sub-sub-menu md:flex md:p-0 block md:relative flex-col mt-6 md:bg-transparent bg-dark-900 w-full absolute left-0 p-10 top-0">
+                                <div class="_back-side-sub-menu flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                </div>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Sambutan Rektor</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Sejarah</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Lambang UNRI</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Hymne UNRI</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Mars UNRI</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Petaka Kampus</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="_sub-menu-wrapper w-full">
+                            <a href="#" class="_poppins-semibold flex justify-between px-2 text-lg text-my-blue-600 hover:bg-gray-100 duration-300 border-gray-100">
+                                <span class="_text-sub-menu">Visi, Misi dan Tugas</span>
+                                <span
+                                data-collapse="visi-misi-tugas" class="_button-sub-sub-menu px-2 text-[12px] md:hidden inline-block"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a> 
+                            <ul 
+                            data-ref-collapse="visi-misi-tugas" class="_sub-sub-menu md:flex md:p-0 block md:relative flex-col mt-6 md:bg-transparent bg-dark-900 w-full absolute left-0 p-10 top-0">
+                                <div class="_back-side-sub-menu flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                </div>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Visi Misi</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Tugas Dan Fungsi UNRI</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> 
+                </li>
+                <li class="_nav-menu px-2 group">
+                    <a href="#" class="md:w-fit w-full md:border-none border-b border-gray-100 py-5 hover:text-secondary duration-500 flex justify-between">
+                        PENDIDIKAN <span data-collapse="pendidikan" class="_button-sub-menu px-2 text-[12px] md:hidden inline-block"><i class="fa-solid fa-chevron-right"></i></span>
+                    </a>
+                    <div data-ref-collapse="pendidikan" class="_sub-menu md:hidden block md:group-hover:flex justify-between gap-8 md:bg-primary-500 bg-dark-900 absolute left-0 md:top-20 w-full p-10 top-0">
+                        <div class="_back-side flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                        </div>
+                        <div class="_sub-menu-wrapper w-full">
+                            <a href="#" class="_poppins-semibold flex justify-between px-2 text-lg text-my-blue-600 hover:bg-gray-100 duration-300 border-gray-100">
+                                <span class="_text-sub-menu">Fakultas</span>
+                                <span
+                                data-collapse="fakultas" class="_button-sub-sub-menu px-2 text-[12px] md:hidden inline-block"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a> 
+                            <ul data-ref-collapse="fakultas" class="_sub-sub-menu md:flex md:p-0 block md:relative flex-col mt-6 md:bg-transparent bg-dark-900 w-full absolute left-0 p-10 top-0">
+                                <div class="_back-side-sub-menu flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                </div>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Keguruan dan Ilmu Pendidikan</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Matematika dan Ilmu Pengetahuan Alam</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Teknik</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Ekonomi dan Bisnis</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Pertanian</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Perikanan dan Kelautan</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Hukum</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Ilmu Sosial dan Ilmu Politik</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Kedokteran</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Keperawatan</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Fakultas Pascasarjana</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="_sub-menu-wrapper w-full">
+                            <a href="#" class="_poppins-semibold flex justify-between px-2 text-lg text-my-blue-600 hover:bg-gray-100 duration-300 border-gray-100">Program Pendidikan</a> 
+                        </div>
+                    </div>
+                </li>
+                <li class="_nav-menu px-2 group">
+                    <a href="#" class="md:w-fit w-full md:border-none border-b border-gray-100 py-5 block hover:text-secondary duration-500">PENELITIAN</a>
+                </li>
+                <li class="_nav-menu px-2 group">
+                    <a href="#" class="md:w-fit w-full md:border-none border-b border-gray-100 py-5 block hover:text-secondary duration-500">MAHASISWA</a>
+                </li>
+                <li class="_nav-menu px-2 group">
+                    <a href="#" class="md:w-fit w-full md:border-none border-b border-gray-100 py-5 block hover:text-secondary duration-500">INTERNASIONAL</a>
+                </li>
+                <li class="_nav-menu px-2 group">
+                    <a href="#" class="md:w-fit w-full md:border-none border-b border-gray-100 py-5 hover:text-secondary duration-500 flex justify-between">
+                        <span class="_text-sub-menu">SISTEM INFORMASI</span>
+                        <span data-collapse="sistem-informasi" class="_button-sub-menu px-2 text-[12px] md:hidden inline-block"><i class="fa-solid fa-chevron-right"></i></span>
+                    </a>
+                    <div data-ref-collapse="sistem-informasi" class="_sub-menu md:hidden block md:group-hover:flex justify-between gap-8 md:bg-primary-500 bg-dark-900 absolute left-0 md:top-20 w-full p-10 top-0">
+                        <div class="_back-side flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                        </div>
+                        <div class="_sub-menu-wrapper w-full">
+                            <a href="#" class="_poppins-semibold flex justify-between px-2 text-lg text-my-blue-600 hover:bg-gray-100 duration-300 border-gray-100">
+                                <span class="_text-sub-menu">Penerimaan Mahasiswa Baru</span>
+                                <span
+                                data-collapse="penerimaan-mahasiswa-baru" class="_button-sub-sub-menu px-2 text-[12px] md:hidden inline-block"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a> 
+                            <ul data-ref-collapse="penerimaan-mahasiswa-baru" class="_sub-sub-menu md:flex md:p-0 block md:relative flex-col mt-6 md:bg-transparent bg-dark-900 w-full absolute left-0 p-10 top-0">
+                                <div class="_back-side-sub-menu flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                </div>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">SNBP & SNBT</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">PMB Jalur PBUD/PBM</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">PMB Mandiri</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="_sub-menu-wrapper w-full">
+                            <a href="#" class="_poppins-semibold flex justify-between px-2 text-lg text-my-blue-600 hover:bg-gray-100 duration-300 border-gray-100">
+                                <span class="_text-sub-menu">Sistem Informasi Akademik</span>
+                                <span
+                                data-collapse="sistem-informasi-akademik" class="_button-sub-sub-menu px-2 text-[12px] md:hidden inline-block"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a> 
+                            <ul data-ref-collapse="sistem-informasi-akademik" class="_sub-sub-menu md:flex md:p-0 block md:relative flex-col mt-6 md:bg-transparent bg-dark-900 w-full absolute left-0 p-10 top-0">
+                                <div class="_back-side-sub-menu flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                </div>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Insentif Penelitian dan Pengabdian</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Karir dan Wirausaha</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Layan Universitas Riau</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Portal Kuliah Kerja Nyata</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Portal Mahasiswa dan Dosen</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Sistem Informasi Admisi</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Sistem Informasi Penelitian</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Sistem Informasi Registrasi Ulang</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">SISTER</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="_sub-menu-wrapper w-full">
+                            <a href="#" class="_poppins-semibold flex justify-between px-2 text-lg text-my-blue-600 hover:bg-gray-100 duration-300 border-gray-100">
+                                <span class="_text-sub-menu">Layanan IT</span>
+                                <span
+                                data-collapse="layanan-it" class="_button-sub-sub-menu px-2 text-[12px] md:hidden inline-block"><i class="fa-solid fa-chevron-right"></i></span>
+                            </a> 
+                            <ul data-ref-collapse="layanan-it" class="_sub-sub-menu md:flex md:p-0 block md:relative flex-col mt-6 md:bg-transparent bg-dark-900 w-full absolute left-0 p-10 top-0">
+                                <div class="_back-side-sub-menu flex flex-col gap-[5px] md:hidden w-full mb-10 -translate-x-3">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                </div>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Akun Email</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Domain Website</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Titik Access Point Lingkungan UNRI</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Dosen dan Mahasiswa Terkendala Login LMS Selasi</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Perbaikan Data Civitas Akademika</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">Blog Staff</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="_poppins-light px-2 py-1 block text-dark-600 text-base duration-300 hover:bg-gray-100 hover:text-my-blue-600 border-gray-100">VPN UNRI</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> 
+                </li>
+                <li class="_nav-menu px-2 group">
+                    <a href="#" class="md:w-fit w-full md:border-none border-b border-gray-100 py-5 block hover:text-secondary duration-500">PENDAFTARAN</a>
+                </li>
+            </ul>
+            <div id="hover-line" class="md:block hidden absolute bottom-0 h-2 transition-all duration-300 bg-secondary"></div>
+            <div id="search">
+                <i class="fa-solid fa-magnifying-glass fa-rotate-90 text-dark-700"></i>
+            </div>
+            <div id="hamburger" class="flex flex-col gap-[5px] md:hidden">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+        </nav>
+    </div>
+    <section id="header" class="relative min-h-screen w-full flex justify-center items-center">
+        <video src="assets/y2mate.com-SLIDESHOW-UNRI-2023_1080p.mp4" 
+            class="absolute top-0 left-0 -z-10 h-screen w-full object-cover"
+            muted
+            autoplay 
+            preload="auto"
+            loop
+            aria-label="Slide show UNRI">
+        </video>
+        <div class="flex flex-col items-center md:gap-8 gap-4">
+            <img src="assets/logo_header.png" alt="Logo UNRI" width="782" height="787" class="md:size-48 size-16">
+            <h1 class="md:text-6xl text-xl text-white font-my-fairplay-display">Universitas Riau</h1>
+        </div>
+    </section>
+    <section id="news" class="md:px-12 px-8 py-16">
+        <div class="flex items-center mb-10">
+            <h2 class="text-[1.5rem] md:w-1/5 w-full text-my-blue-900 font-bold">Berita Terbaru</h2>
+            <div class="md:w-full w-1/2 h-[2px] bg-primary"></div>
+        </div>
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-10">
+            <article class="w-full">
+                <div class="w-full h-auto rounded-[4px] overflow-hidden">
+                    <img 
+                        loading="lazy" 
+                        src="assets/berita/33-Orang-Pustakawan-Ikuti-Sertifikasi-Kompetensi-Pustakawan-700x430.jpg" 
+                        alt="33 Orang Pustakawan Ikuti Sertifikasi Kompetensi Pustakawan" 
+                        class="w-full object-cover cursor-pointer hover:scale-110 hover:brightness-[0.3] duration-500">
+                </div>
+                <p class="_poppins-semibold mt-6 text-sm text-dark-400 cursor-pointer">JULY 31, 2024</p>
+                <h3 class="_poppins-bold mt-2 text-dark-600 cursor-pointer hover:text-secondary duration-500">33 Orang Pustakawan Ikuti Sertifikasi Kompetensi Pustakawan</h3>
+            </article>
+            <article class="w-full">
+                <div class="w-full h-auto rounded-[4px] overflow-hidden">
+                    <img 
+                        loading="lazy" 
+                        src="assets/Tingkatkan-Pendapatan-Masyarakat-Kukerta-MBKM-Unri-Lakukan-Pengolahan-Ikan-700x430.gif" 
+                        alt="Tingkatkan Pendapatan Masyarakat Kukerta MBKM Unri Lakukan Pengolahan Ikan" 
+                        class="w-full object-cover cursor-pointer hover:scale-110 hover:brightness-[0.3] duration-500">
+                </div>
+                <p class="_poppins-semibold mt-6 text-sm text-dark-400 cursor-pointer">JULY 29, 2024</p>
+                <h3 class="_poppins-bold mt-2 text-dark-600 cursor-pointer hover:text-secondary duration-500">Tingkatkan Pendapatan Masyarakat, Kukerta MBKM Unri Lakukan Pengolahan Ikan</h3>
+            </article>
+            <article class="w-full">
+                <div class="w-full h-auto rounded-[4px] overflow-hidden">
+                    <img 
+                        loading="lazy" 
+                        src="assets/berita/Raker-IKA-Unri-Membangun-Jejaring-Akademik-Terintegrasi-Pada-Alumni-dan-Stake-Holder-1-700x430.jpg" 
+                        alt="Raker IKA Unri, Membangun Jejaring Akademik Terintegrasi Pada Alumni dan Stake Holder" 
+                        class="w-full object-cover cursor-pointer hover:scale-110 hover:brightness-[0.3] duration-500">
+                </div>
+                <p class="_poppins-semibold mt-6 text-sm text-dark-400 cursor-pointer">JULY 27, 2024</p>
+                <h3 class="_poppins-bold mt-2 text-dark-600 cursor-pointer hover:text-secondary duration-500">Raker IKA Unri, Membangun Jejaring Akademik Terintegrasi Pada Alumni dan Stake Holder</h3>
+            </article>
+            <article class="w-full">
+                <div class="w-full h-auto rounded-[4px] overflow-hidden">
+                    <img 
+                        loading="lazy" 
+                        src="assets/berita/Sukses-Seminar-Antarabangsa-ke-12-EHMAP-Kerjasama-Unri-UKM-Bahas-60-Paper-700x430.gif" 
+                        alt="Sukses, Seminar Antarabangsa ke-12 “EHMAP” Kerjasama Unri-UKM Bahas 60 Paper" 
+                        class="w-full object-cover cursor-pointer hover:scale-110 hover:brightness-[0.3] duration-500">
+                </div>
+                <p class="_poppins-semibold mt-6 text-sm text-dark-400 cursor-pointer">JULY 26, 2024</p>
+                <h3 class="_poppins-bold mt-2 text-dark-600 cursor-pointer hover:text-secondary duration-500">Sukses, Seminar Antarabangsa ke-12 “EHMAP” Kerjasama Unri-UKM Bahas 60 Paper</h3>
+            </article>
+            <article class="w-full">
+                <div class="w-full h-auto rounded-[4px] overflow-hidden">
+                    <img 
+                        loading="lazy" 
+                        src="assets/berita/Unri-Rencanakan-Revitalisasi-Danau-untuk-mereduksi-Banjir-700x430.jpg" 
+                        alt="Unri Rencanakan Revitalisasi Danau untuk mereduksi Banjir" 
+                        class="w-full object-cover cursor-pointer hover:scale-110 hover:brightness-[0.3] duration-500">
+                </div>
+                <p class="_poppins-semibold mt-6 text-sm text-dark-400 cursor-pointer">JULY 25, 2024</p>
+                <h3 class="_poppins-bold mt-2 text-dark-600 cursor-pointer hover:text-secondary duration-500">Unri Rencanakan Revitalisasi Danau untuk mereduksi Banjir</h3>
+            </article>
+            <article class="w-full">
+                <div class="w-full h-auto rounded-[4px] overflow-hidden">
+                    <img 
+                        loading="lazy" 
+                        src="assets/berita/Akreditasi-Internasional-FIBAA-di-FEB-Sebagai-Wujud-Internasionalisasi-Unri-700x430.jpg" 
+                        alt="Akreditasi Internasional FIBAA di FEB Sebagai Wujud Internasionalisasi Unri" 
+                        class="w-full object-cover cursor-pointer hover:scale-110 hover:brightness-[0.3] duration-500">
+                </div>
+                <p class="_poppins-semibold mt-6 text-sm text-dark-400 cursor-pointer">JULY 25, 2024</p>
+                <h3 class="_poppins-bold mt-2 text-dark-600 cursor-pointer hover:text-secondary duration-500">Akreditasi Internasional FIBAA di FEB Sebagai Wujud Internasionalisasi Unri</h3>
+            </article>
+        </div>
+        <div class="flex justify-center w-full">
+            <a href="#" class="_poppins-semibold block w-fit mt-12 md:text-sm text-[13px] px-8 py-4 rounded-full bg-primary">
+                Berita Sebelumnya
+            </a>
+        </div>
+    </section>
+    <article class="md:px-12 px-8 flex justify-center w-full">
+        <a href="#" class="_poppins-semibold block w-fit md:text-sm text-[13px] text-center px-8 py-4 rounded-full bg-primary">
+            Panduan Pendaftaran Ulang Mahasiswa Baru Jalur SMM PTN-BARAT TA 2023/2024
+        </a>
+    </article>
+    <section id="detail-data" class="py-8 md:px-18 px-8 md:mx-8 mx-4 my-16 grid md:grid-cols-6 grid-cols-1 gap-4 gap-y-20 bg-gray-100">
+        <div class="w-full flex items-center flex-col gap-6">
+            <i class="fa-solid fa-circle-user text-dark-500 text-6xl"></i>
+            <p data-target="107" class="_counter text-dark-900 text-5xl">0</p>
+            <span class="w-6 h-[2px] bg-dark-800"></span>
+            <p class="text-dark-800">GURU BESAR</p>
+        </div>
+        <div class="w-full flex items-center flex-col gap-6">
+            <i class="fa-solid fa-building text-dark-500 text-6xl"></i>
+            <p data-target="10" class="_counter text-dark-900 text-5xl">0</p>
+            <span class="w-6 h-[2px] bg-dark-800"></span>
+            <p class="text-dark-800">Fakultas</p>
+        </div>
+        <div class="w-full flex items-center flex-col gap-6">
+            <i class="fa-brands fa-leanpub text-dark-500 text-6xl"></i>
+            <p data-target="1170" class="_counter text-dark-900 text-5xl">0</p>
+            <span class="w-6 h-[2px] bg-dark-800"></span>
+            <p class="text-dark-800">Dosen</p>
+        </div>
+        <div class="w-full flex items-center flex-col gap-6">
+            <i class="fa-solid fa-id-card text-dark-500 text-6xl"></i>
+            <p data-target="35388" class="_counter text-dark-900 text-5xl">0</p>
+            <span class="w-6 h-[2px] bg-dark-800"></span>
+            <p class="text-dark-800">Mahasiswa</p>
+        </div>
+        <div class="w-full flex items-center flex-col gap-6">
+            <i class="fa-brands fa-trello text-dark-500 text-6xl"></i>
+            <p data-target="109" class="_counter text-dark-900 text-5xl">0</p>
+            <span class="w-6 h-[2px] bg-dark-800"></span>
+            <p class="text-dark-800">Program Studi</p>
+        </div>
+        <div class="w-full flex items-center flex-col gap-6">
+            <i class="fa-solid fa-address-book text-dark-500 text-6xl"></i>
+            <p data-target="902" class="_counter text-dark-900 text-5xl">0</p>
+            <span class="w-6 h-[2px] bg-dark-800"></span>
+            <p class="text-dark-800">Tenaga Pendidikan</p>
+        </div>
+    </section>
+    <section id="announcement" class="md:px-12 px-8 py-16">
+        <div class="flex items-center mb-10">
+            <h2 class="text-[1.5rem] md:w-1/5 w-full text-my-blue-900 font-bold">Pengumuman</h2>
+            <div class="md:w-full w-1/2 h-[2px] bg-primary"></div>
+        </div>
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-10">
+            <article class="w-full">
+                <p class="_poppins-semibold text-sm text-dark-400 cursor-pointer">JULY 29, 2024</p>
+                <a href="#" class="_poppins-bold block mt-2 text-dark-600 cursor-pointer hover:text-secondary duration-500">Peninjauan UKT Mahasiswa Baru Jalur PBUD 2024</a>
+            </article>
+            <article class="w-full">
+                <p class="_poppins-semibold text-sm text-dark-400 cursor-pointer">JULY 29, 2024</p>
+                <a href="#" class="_poppins-bold block mt-2 text-dark-600 cursor-pointer hover:text-secondary duration-500">Peninjauan UKT Mahasiswa Baru Jalur PBUD 2024</a>
+            </article>
+            <article class="w-full">
+                <p class="_poppins-semibold text-sm text-dark-400 cursor-pointer">JULY 29, 2024</p>
+                <a href="#" class="_poppins-bold block mt-2 text-dark-600 cursor-pointer hover:text-secondary duration-500">Peninjauan UKT Mahasiswa Baru Jalur PBUD 2024</a>
+            </article>
+        </div>
+        <div class="flex justify-center w-full mt-16">
+            <a href="#" class="_poppins-semibold block w-fit md:text-sm text-[13px] px-8 py-4 rounded-full bg-primary">
+                Pengumuman Sebelumnya
+            </a>
+        </div>
+    </section>
+    <section id="program" class="py-16">
+        <article class="md:px-12 px-8 pb-16 md:grid block grid-cols-2 justify-items-end">
+            <img loading="lazy" src="assets/header_program.jpg" alt="Header Program UNRI"
+                class="md:block hidden w-full object-cover h-[360px]">
+            <div class="md:pl-20 pl-0 h-full flex flex-col justify-center">
+                <p class="md:text-[120px] text-[56px] leading-10 mb-2 text-secondary font-['ABeeZee'] font-bold">“</p>
+                <p class="_poppins-bold text-[22px] leading-10 text-dark-800">
+                    UNRI Memiliki 10 fakultas yang menyelenggarakan program sarjana, pascasarjana, profesi, serta diploma. 
+                </p>
+            </div>
+        </article>
+        <article class="grid md:grid-cols-3 grid-cols-1 min-h-screen">
+            <!-- Sarjana -->
+            <div class="py-16 w-full h-full bg-primary mx-auto flex justify-center">
+                <div
+                    data-aos-once="true" data-aos="fade-down" 
+                    class="w-[320px] h-full flex flex-col items-center justify-center gap-4 text-center">
+                    <i class="fa-solid fa-user text-dark-500 text-4xl mb-6"></i>
+                    <h3 class="_poppins-semibold text-dark-800 text-lg">PROGRAM SARJANA</h3>
+                    <p class="text-dark-500">
+                        Program sarjana bisa diikuti oleh lulusan SMA/SMK/MA/MAK, mempunyai beban studi 144-160 sks dan dapat ditempuh dalam waktu 8-14 semester
+                    </p>
+                    <div class="flex justify-center w-full">
+                        <a href="#" class="_poppins-semibold block w-fit mt-10 text-sm px-8 py-4 rounded-full bg-black text-primary">
+                            Berita Sebelumnya
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pascasarjana -->
+            <div class="py-16 w-full h-full bg-dark-800 mx-auto flex justify-center">
+                <div 
+                    data-aos-once="true" data-aos="fade-up" 
+                    data-aos-delay="300"   
+                    class="w-[320px] h-full flex flex-col items-center justify-center gap-4 text-center">
+                    <i class="fa-solid fa-users text-dark-500 text-4xl mb-6"></i>
+                    <h3 class="_poppins-semibold text-dark-600 text-lg">PROGRAM PASCASARJANA</h3>
+                    <p class="text-dark-500">
+                        UNRI menawarkan program studi lanjutan di tingkat S2 dan S3 yang diselenggarakan di fakultas serta sekolah Pascasarjana.
+                    </p>
+                    <div class="flex justify-center w-full">
+                        <a href="#" class="_poppins-semibold block w-fit mt-10 text-sm px-8 py-4 rounded-full bg-primary">
+                            Berita Sebelumnya
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Profesi -->
+            <div class="py-16 w-full h-full bg-primary mx-auto flex justify-center">
+                <div 
+                    data-aos-once="true" data-aos="fade-down"
+                    data-aos-delay="600"
+                    class="w-[320px] h-full flex flex-col items-center justify-center gap-4 text-center">
+                    <i class="fa-solid fa-street-view text-dark-500 text-4xl mb-6"></i>
+                    <h3 class="_poppins-semibold text-dark-800 text-lg">PROGRAM PROFESI</h3>
+                    <p class="text-dark-500">
+                        Program profesi diperuntukkan sebagai bagi lulusan program studi tertentu sebagai syarat untuk mendapatkan gelar keprofesian.
+                    </p>
+                    <div class="flex justify-center w-full">
+                        <a href="#" class="_poppins-semibold block w-fit mt-10 text-sm px-8 py-4 rounded-full bg-black text-primary">
+                            Berita Sebelumnya
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section id="research" class="md:py-16 py-4 md:px-12 px-8 overflow-hidden">
+        <article class="grid md:grid-cols-2 grid-cols-1">
+            <div class="w-full h-full flex items-center">
+                <img src="assets/header_research.jpg" alt="Header Research UNRI" class="w-full md:h-[420px] h-[220px] object-cover">
+            </div>
+            <div data-aos-once="true" data-aos="fade-left" class="md:pl-20 pl-0 py-8">
+                <h2 class="_poppins-semibold text-[40px] w-1/5">Penelitian</h2>
+                <p class="my-6 text-dark-700 leading-7 text-justify">
+                    Sebagai Universitas Riset Berkelas Dunia, Universitas Riau memberikan perhatian khusus terhadap kegiatan-kegiatan penelitian serta mendorong dosen dan mahasiswa untuk melakukan dan mengembangkan berbagai penelitian yang berorientasi untuk memenuhi kebutuhan bangsa.
+                </p>
+                <div class="my-8 block">
+                    <a href="#" class="_poppins-bold block w-fit text-base px-8 py-4 rounded-full border-[2px] border-primary">
+                        SELENGKAPNYA
+                    </a>
+                </div>
+                <img loading="lazy" src="assets/research_image.jpg" alt="Research UNRI" class="md:h-[360px] h-[220px] w-full object-cover">
+            </div>
+        </article>
+    </section>
+    <section id="community-service" class="bg-primary md:pt-0 pt-16">
+        <article class="grid md:grid-cols-2 grid-cols-1 min-h-screen items-center">
+            <div data-aos-once="true" data-aos="fade-right" class="md:px-20 px-8">
+                <h2 class="_poppins-bold text-[40px] w-1/5">Pengabdian</h2>
+                <span class="block h-[1px] w-1/5 bg-primary my-2"></span>
+                <p class="my-6 text-dark-500 leading-7 text-justify">
+                    UNRI secara konsisten dan sistematik sejak tahun pendiriannya 1962 berjuang bersama rakyat hingga akar rumput membangun dan menyejahterakan Indonesia. UNRI terus mendorong peningkatan kuantitas dan kualitas pengabdian kepada masyarakat berbasis riset di Indonesia maupun di dunia Internasional dengan prinsip-prinsip pembangunan berkelanjutan. UNRI secara bertahap membangun kepemimpinan pengabdian kepada masyarakat di dunia internasional, antara lain untuk mendesiminasikan nilai-nilai baik keindonesiaan dan kemanusiaan.
+                </p>
+                <div class="my-8 block">
+                    <a href="#" class="_poppins-bold text-dark-600 block w-fit text-base rounded-full hover:text-secondary duration-500">
+                        LEBIH LANJUT
+                    </a>
+                </div>
+            </div>
+            <div class="w-full h-full flex md:flex-row flex-col-reverse items-center">
+                <img src="assets/header_pengabdian.jpg" alt="Header Pengabdian UNRI" class="md:block hidden md:w-1/2 w-full h-full object-cover">
+                <div class="py-16 flex flex-col justify-center items-center md:w-1/2 w-full h-full bg-dark-900">
+                    <i  data-aos-once="true" data-aos="fade-in" class="fa-regular fa-hard-drive text-6xl text-dark-500"></i>
+                    <div  data-aos-once="true" data-aos="fade-in" class="flex justify-center w-full mt-8">
+                        <a href="#" class="_poppins-bold block w-fit text-sm px-8 py-4 rounded-full bg-primary">
+                            Kuliah Kerja Nyata
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section id="about" class="overflow-hidden">
+        <article class="grid md:grid-cols-2 grid-cols-1 min-h-screen items-center">
+            <div class="w-full h-full flex items-center">
+                <img src="assets/header_about.jpg" alt="Header About UNRI" class="w-full md:h-full h-[120px] object-cover">
+            </div>
+            <div data-aos-once="true" data-aos="fade-left" class="md:px-20 px-8 py-16">
+                <h2 class="_poppins-bold text-[40px] w-fit">Tentang UNRI</h2>
+                <span class="block h-[1px] w-1/5 bg-primary my-2"></span>
+                <p class="my-6 text-dark-500 leading-7 text-justify">
+                    Turut mengahasilkan SDM yang unggul di tingkat pendidikan tinggi sejak 1962 baik di Provinsi Riau maupun Skala nasional. Meningkatkan dan memperkokoh daya saing SDM melalui tri dharma pergurauan tinggi: pendidikan & pengajaran, penelitian, dan pengabdian kepada masyarakat. Berkontribusi dalam memenuhi kebutuhan teknologi, menciptakan lapangan kerja, pertumbuhan ekonomi regional dan nasional. Menyediakan dan mengatur pendanaan bagi penyediaan sarana dan prasarana pendidikan serta penyelenggaraan pendidikan sesuai dengan standar dengan mutu terbaik.
+                </p>
+                <div class="mt-8">
+                    <a href="#" class="_poppins-semibold block w-fit text-sm px-8 py-4 rounded-full bg-primary">
+                        Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section id="student" class="bg-primary">
+        <article class="grid md:grid-cols-2 grid-cols-1 md:min-h-screen h-full items-center">
+            <div data-aos-once="true" data-aos="fade-right" class="md:px-20 px-8 py-16">
+                <h2 class="_poppins-bold text-[40px] w-full break-words">KEMAHASISWAAN</h2>
+                <span class="block h-[1px] w-1/5 bg-primary my-2"></span>
+                <p class="my-6 text-dark-500 leading-7 text-justify">
+                    Mencetak mahasiswa berwawasan global dan berintegritas yang dilandasi nilai-nilai Pancasila.
+                </p>
+                <div class="mt-8">
+                    <a href="#" class="_poppins-semibold block w-fit text-sm px-8 py-4 rounded-full bg-black text-primary">
+                        Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+            <div class="w-full h-full flex items-center">
+                <img src="assets/header_student.jpeg" alt="Header Student UNRI" class="w-full md:h-full h-[120px] object-cover">
+            </div>
+        </article>
+    </section>
+    <section id="alumni" class="bg-dark-800 overflow-hidden">
+        <article class="grid md:grid-cols-2 grid-cols-1 md:min-h-screen h-full items-center">
+            <div class="w-full h-full flex items-center">
+                <img src="assets/header_alumni.jpg" alt="Header Alumni UNRI" class="w-full md:h-full h-[120px] object-cover">
+            </div>
+            <div data-aos-once="true" data-aos="fade-left" class="md:px-20 px-8 py-16">
+                <h2 class="_poppins-bold text-[40px] w-fit text-white">ALUMNI</h2>
+                <span class="block h-[1px] w-1/5 bg-primary my-2"></span>
+                <p class="my-6 text-dark-500 leading-7 text-justify">
+                    Alumni UNRI tersebar di berbagai wilayah, berkiprah di tingkat nasional dan global.
+                </p>
+                <div class="mt-8">
+                    <a href="#" class="_poppins-semibold block w-fit text-sm px-8 py-4 rounded-full bg-black text-primary">
+                        Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section id="advertising" class="md:px-12 px-8 py-16">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-10">
+            <article class="relative w-full h-[240px] cursor-pointer">
+                <a href="#" class="w-full h-full block">
+                    <div class="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 hover:bg-primary hover:opacity-70 duration-500">
+                        <i class="fa-solid fa-arrow-pointer text-white text-3xl"></i>
+                    </div>
+                    <img loading="lazy" src="assets/ads 1.png" alt="Layanan Informasi Publik" class="w-full h-full md:object-cover object-fill">
+                </a>
+            </article>
+            <article class="relative w-full h-[240px] cursor-pointer">
+                <a href="#" class="w-full h-full block">
+                    <div class="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 hover:bg-primary hover:opacity-70 duration-500">
+                        <i class="fa-solid fa-arrow-pointer text-white text-3xl"></i>
+                    </div>
+                    <img loading="lazy" src="assets/ads 2.png" alt="Sampaikan Aspirasi dan Pengaduan" class="w-full h-full md:object-cover object-fill">
+                </a>
+            </article>
+            <article class="relative w-full h-[240px] cursor-pointer">
+                <a href="#" class="w-full h-full block">
+                    <div class="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 hover:bg-primary hover:opacity-70 duration-500">
+                        <i class="fa-solid fa-arrow-pointer text-white text-3xl"></i>
+                    </div>
+                    <img loading="lazy" src="assets/ads 3.png" alt="Wisthle Blowing System" class="w-full h-full md:object-cover object-fill">
+                </a>
+            </article>
+            <article class="relative w-full h-[240px] cursor-pointer">
+                <a href="#" class="w-full h-full block">
+                    <div class="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 hover:bg-black hover:opacity-70 duration-500">
+                        <i class="fa-solid fa-link text-white text-3xl"></i>
+                    </div>
+                    <img loading="lazy" src="assets/ads 4.png" alt="Cek Fakta" class="w-full h-full md:object-cover object-fill">
+                </a>
+            </article>
+            <article class="relative w-full h-full cursor-pointer">
+                <a href="#" class="w-full h-full block">
+                    <div class="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 hover:bg-black hover:opacity-70 duration-500">
+                        <i class="fa-solid fa-link text-white text-3xl"></i>
+                    </div>
+                    <img loading="lazy" src="assets/ads 5.jpeg" alt="Sampaikan Aspirasi dan Pengaduan" class="w-full h-full md:object-cover object-fill">
+                </a>
+            </article>
+        </div>
+    </section>
+    <footer class="md:px-12 px-8 py-16 bg-dark-900 grid md:grid-cols-4 grid-cols-1 gap-14">
+        <div class="w-full">
+            <img loading="lazy" src="assets/logo_navigasi_bar.png" alt="Logo UNRI" width="787" height="787" class="max-h-11">
+            <p class="text-dark-400 my-6">
+                Kampus Bina Widya KM. 12,5, Simpang Baru, Kec. Tampan, Kota Pekanbaru, Riau 28293
+            </p>
+            <p class="text-white">(0761) 63266</p>
+            <a href="mailto:helpdesk@unri.ac.id" class="block text-white my-4">helpdesk@unri.ac.id</a>
+            <span class="block w-full h-[2px] bg-secondary"></span>
+        </div>
+        <div class="w-full col-span-2">
+            <h4 class="_poppins-bold text-white text-lg">Peta</h4>
+            <span class="my-4 block w-1/2 h-[2px] bg-secondary"></span>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15958.721623604019!2d101.380647!3d0.476395!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5aea1f427ab57%3A0x74d49c35acbd10e1!2sUniversitas%20Riau!5e0!3m2!1sid!2sid!4v1722411069581!5m2!1sid!2sid"
+                height="300"
+                class="w-full mt-8"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </footer>
+    <section id="copyright" class="px-12 py-8 bg-dark-700">
+        <p class="text-dark-500">Copyright @ Universitas Riau</p>
+    </section>
+
+    <script src="script/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
