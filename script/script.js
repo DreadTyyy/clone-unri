@@ -8,7 +8,7 @@ const counters = document.querySelectorAll('._counter');
 const scrollTop = document.getElementById('scroll-top');
 const navMenuItems = document.querySelectorAll('._nav-menu');
 const hoverLine = document.getElementById('hover-line'); 
-const navContainer = document.querySelector('._nav-container')
+const navContainer = document.querySelector('._nav-container');
 
 hamburger.addEventListener('click', () => {
     navigationBar.classList.toggle('navigation-open');
@@ -89,8 +89,6 @@ window.addEventListener('resize', handleScroll);
 // Initial check in case elements are already in view
 handleScroll();
 
-
-
 window.addEventListener('DOMContentLoaded', () => {
     // Animation on Navigation Bar
     const setPlaceHoverLine = () => {
@@ -116,7 +114,20 @@ window.addEventListener('DOMContentLoaded', () => {
     })
     
     setPlaceHoverLine();
-})
 
+    // Search Script
+    const closeSearchBtn = document.getElementById('close-search');
+    const search = document.getElementById('search');
+    const searchPopUp = document.getElementById('search-popup');
+
+    search.addEventListener('click', () => {
+        searchPopUp.classList.add('open');
+        searchPopUp.classList.remove('closed');
+    });
+    closeSearchBtn.addEventListener('click', () => {
+        searchPopUp.classList.remove('open');
+        searchPopUp.classList.add('closed');
+    }); 
+})
 
 

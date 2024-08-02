@@ -26,7 +26,23 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body class="_poppins-regular">
-    <div class="_overlay"></div>
+    <div id="search-popup" class="_overlay-search closed z-[9999] px-4">
+        <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-6 flex items-center gap-8 border-b-[3px] border-dark-700 md:w-fit w-[90%] text-white">
+            <input 
+                name="search" 
+                type="text" 
+                placeholder="Search..."
+                class="md:text-4xl text-3xl focus:outline-none bg-transparent placeholder:text-white w-full"
+                >
+            <div id="search-btn">
+                <i class="fa-solid fa-magnifying-glass md:text-3xl text-xl cursor-pointer"></i>
+            </div>
+            <div id="close-search">
+                <i class="fa-solid fa-xmark md:text-4xl text-2xl cursor-pointer"></i>
+            </div>
+        </div>
+    </div>
+    <div class="_overlay z-[99]"></div>
     <div id="scroll-top" class="size-fit fixed bottom-5 right-5 z-[999] transition-all duration-300">
         <a href="#top" class="text-sm size-12 bg-gray-300 rounded-full flex justify-center items-center">
             <i class="fa-solid fa-chevron-right -rotate-90"></i>
@@ -351,7 +367,7 @@
             </ul>
             <div id="hover-line" class="md:block hidden absolute bottom-0 h-2 transition-all duration-300 bg-secondary"></div>
             <div id="search">
-                <i class="fa-solid fa-magnifying-glass fa-rotate-90 text-dark-700"></i>
+                <i class="fa-solid fa-magnifying-glass fa-rotate-90 text-dark-700 cursor-pointer"></i>
             </div>
             <div id="hamburger" class="flex flex-col gap-[5px] md:hidden">
                 <span class="hamburger-line"></span>

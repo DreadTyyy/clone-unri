@@ -11,15 +11,26 @@
     background-size: cover;
 }
 
-._overlay.open {
+._overlay-search.closed {
+    display: none;
+}
+
+._overlay.open,
+._overlay-search.open {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
     background-color: black;
-    opacity: 0.6;
-    z-index: 99;
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+body:has(._overlay-search.open),
+body:has( ._overlay.open) {
+    overflow: hidden;
 }
 
 .hamburger-line {
